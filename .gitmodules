@@ -1,0 +1,3 @@
+[submodule ".config/git_prompt"]
+	path = .config/git_prompt
+  url = https://github.com/magicmonty/bash-git-prompt.git
