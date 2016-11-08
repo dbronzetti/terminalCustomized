@@ -4,7 +4,7 @@ This repository contains the basic profile configuration for my terminals after 
 #How to clone a repo into an existing directory
 ```Bash
 git init
-git remote add origin https://github.com/PabloScolpino/terminalrc.git
+git remote add origin https://github.com/dbronzetti/terminalCustomized.git
 git fetch
 git checkout -t origin/master
 ```
