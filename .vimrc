@@ -99,7 +99,6 @@ map <leader>s :tabnext<CR>
 " ,r    | Check Ruby Syntax
 map <Leader>r :RuboCop<CR>
 " ,t    | Open Tree Directory
-map <leader>t :NERDTreeToggle<CR>
 
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -185,10 +184,11 @@ nmap <C-i> <leader>ig
 Plug 'junegunn/limelight.vim'                                       " limelight - Fade unimportant things while writing
 Plug 'terryma/vim-multiple-cursors'                                 " vim-multiple-cursors - To edit files w/multiple cursors
 Plug 'scrooloose/nerdcommenter'                                     " nerdcommenter - Comment code easily
-Plug 'scrooloose/nerdtree'                                          " nerdtree - Very nice file manager
-"Plug 'jistr/vim-nerdtree-tabs'                                      " nerdtree - Tabs, to use tabs painlessly
-let NERDTreeQuitOnOpen=1
-let g:NERDTreeChDirMode = 2
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }				" nerdtree - Very nice file manager
+map <C-m> :NERDTreeToggle<CR>
+Plug 'jistr/vim-nerdtree-tabs'										" nerdtree - Tabs, to use tabs painlessly
+let g:nerdtree_tabs_open_on_console_startup = 1
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'galli-a/persistentvisuals'                                    " persistentvisuals - This is nice when you use < or > to reindent
 Plug 'ngmy/vim-rubocop'                                             " rubocop - Ruby specific to check syntax
 let g:vimrubocop_config = '~/rubocop.yml'
