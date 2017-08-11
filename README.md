@@ -9,3 +9,4 @@ git fetch
 git checkout -t origin/master
 ```
 [Source](http://stackoverflow.com/questions/2411031/how-do-i-clone-into-a-non-empty-directory)
+[VimPLug](https://github.com/junegunn/vim-plug)
