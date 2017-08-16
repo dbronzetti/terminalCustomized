@@ -32,7 +32,8 @@
 "
 " 2. Download Plugged (which is the plugin manager I decided to use)
 "  $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"
+"  $ mkdir -p ~/.vim/autoload ~/.vim/bundle && \curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+"  $ cd ~/.vim/bundle && \git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 "
 " 3. Link to monokai  (you can use molokai if you want)
 "  $ ln -s ~/.vim/plugged/molokai/colors/molokai.vim ~/.vim/colors
@@ -114,7 +115,7 @@ set undodir=~/.vim/undo_files/
 syntax on                                           " Who can work without syntax highlighting
 set t_Co=256
 set background=dark
-colorscheme molokai
+
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
@@ -154,6 +155,7 @@ set autoindent                          " Autoindent
 set nocindent                           " Good autoindent :-)
 set tabstop=2 shiftwidth=2 expandtab
 
+execute pathogen#infect()
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 "  Plugins! (and its configurations)
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -215,3 +217,5 @@ Plug 'bronson/vim-trailing-whitespace'                              " trailing-w
 Plug 'Valloric/YouCompleteMe'                                       " YouCompleteMe
 
 call plug#end()
+
+colorscheme molokai
