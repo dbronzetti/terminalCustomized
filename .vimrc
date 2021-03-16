@@ -214,7 +214,7 @@ let g:SuperTabContextDefaultCompletionType ="<C-X><C-O>"
 Plug 'majutsushi/tagbar'                                            " tagbar
 Plug 'felixcuello/taghighlight'                                     " TagHighlight - This is to highlight also the tags
 Plug 'bronson/vim-trailing-whitespace'                              " trailing-whitespace - Mark trailing whitespaces in red
-let g:strip_whitespace_on_save=1
+let g:strip_whitespace_on_save = 1
 "Plug 'Valloric/YouCompleteMe'                                       " YouCompleteMe
 
 call plug#end()
