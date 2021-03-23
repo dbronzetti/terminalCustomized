@@ -69,6 +69,12 @@ map <C-BS> <C-t>
 map <leader>. <C-t>
 " ,a    | Tab left
 map <leader>a :tabprevious<CR>
+" ,n    | Buffer next
+map <leader>n :bn<CR>
+" ,b    | Buffer back
+map <leader>b :bp<CR>
+" ,c    | Close current Buffer
+map <leader>c :bd<CR>
 " ,d    | Open Method's Definition
 map <leader>d :TagbarOpenAutoClose<CR>
 " ,cr   | Checks for ruby syntax
@@ -99,8 +105,6 @@ map <leader>l :Limelight!!0.8<CR>
 map <leader>s :tabnext<CR>
 " ,r    | Check Ruby Syntax
 map <Leader>r :RuboCop<CR>
-" ,t    | Open Tree Directory
-
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 "  Don't like backup/swap files everywhere, so I confined them here
