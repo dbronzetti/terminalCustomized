@@ -56,6 +56,8 @@ let mapleader=","          " Yes!, comma must be the leader
 
 " Find in this file
 map <leader>f /
+" Remove search highlights
+map <leader>h :noh<CR>
 " <C-CR> Open Definition (ctags)
 map <C-CR> <C-]>
 " Open ctag definition
@@ -67,8 +69,8 @@ map <leader>m :ts<CR>
 " <C-BS> Go back from the definition
 map <C-BS> <C-t>
 map <leader>. <C-t>
-" ,a    | Tab left
-map <leader>a :tabprevious<CR>
+" ,ls    | Buffer listing
+map <leader>ls :ls<CR>
 " ,n    | Buffer next
 map <leader>n :bn<CR>
 " ,b    | Buffer back
@@ -101,6 +103,8 @@ map <leader>gs :Gstatus<CR>
 map <leader>gu :Gpull<CR>
 " ,l    | Toggle limelight (AKA focusin)
 map <leader>l :Limelight!!0.8<CR>
+" ,a    | Tab left
+map <leader>a :tabprevious<CR>
 " ,s    | Tab right
 map <leader>s :tabnext<CR>
 " ,r    | Check Ruby Syntax
