@@ -1,4 +1,4 @@
-export EDITOR=vi
+export EDITOR=mvim
 export OS_TYPE=`uname`
 export ftp_host="/media/sf_ftp_host"
 
