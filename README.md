@@ -9,6 +9,12 @@ git fetch
 git checkout -t origin/master
 ```
 
+# Install MacVim and more
+```
+brew install macvim the_silver_searcher
+brew install --cask iterm2
+```
+
 # Symlink configs
 ```
 ln -s ~/.terminalCustomized/.vimrc ~/.vimrc
@@ -16,6 +22,8 @@ ln -s ~/.terminalCustomized/.profile ~/.profile
 ln -s ~/.terminalCustomized/.bashrc ~/.bashrc
 ln -s ~/.terminalCustomized/.bash_profile ~/.bash_profile
 ln -s ~/.terminalCustomized/.config/ ~/.config
+
+vim +PluginInstall +qall
 ```
 
 ---
