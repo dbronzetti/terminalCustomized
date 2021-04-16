@@ -75,8 +75,10 @@ map <leader>ls :ls<CR>
 map <leader>n :bn<CR>
 " ,b    | Buffer back
 map <leader>b :bp<CR>
-" ,c    | Close current Buffer
+" ,c    | Close all Buffers
 map <leader>c :%bd<CR>
+" ,x    | Close current Buffer
+map <leader>x :bd<CR>
 " ,d    | Open Method's Definition
 map <leader>d :TagbarOpenAutoClose<CR>
 " ,cr   | Checks for ruby syntax
