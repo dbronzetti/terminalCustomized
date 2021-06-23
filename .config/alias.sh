@@ -1,3 +1,4 @@
+alias aliases='cat ~/.terminalCustomized/.config/alias.sh'
 alias cls='clear'
 alias ll='cls;ls -ltrG'
 alias la='cls;ll -a'
