@@ -1,3 +1,6 @@
+# Only for Apple Silicon processors
+# TODO improve only for M1 using command sysctl -a | grep brand
+export PATH="/opt/homebrew/bin:$PATH"
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
