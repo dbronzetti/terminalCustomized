@@ -36,6 +36,10 @@ Pretty ```git lg```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 ```
 
+```
+git config --global alias.cm "commit -m"
+```
+
 ---
 # Useful links
 * [Source](http://stackoverflow.com/questions/2411031/how-do-i-clone-into-a-non-empty-directory)
