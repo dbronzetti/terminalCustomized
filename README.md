@@ -39,7 +39,10 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 ```
 git config --global alias.cm "commit -m"
 ```
+```
+git config --global core.editor "mvim -f"
 
+```
 ---
 # Useful links
 * [Source](http://stackoverflow.com/questions/2411031/how-do-i-clone-into-a-non-empty-directory)
