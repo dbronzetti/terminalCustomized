@@ -38,6 +38,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 ```
 git config --global alias.cm "commit -m"
+git config --global alias.ca "commit --amend"
 ```
 ```
 git config --global core.editor "mvim -f"
