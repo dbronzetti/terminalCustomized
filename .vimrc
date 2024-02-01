@@ -222,7 +222,7 @@ let g:SuperTabClosePreviewOnPopupClose = 1
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType ="<C-X><C-O>"
 Plug 'majutsushi/tagbar'                                            " tagbar
-Plug 'felixcuello/taghighlight'                                     " TagHighlight - This is to highlight also the tags
+Plug 'vim-scripts/taghighlight'                                     " TagHighlight - This is to highlight also the tags
 Plug 'ntpeters/vim-better-whitespace'                               " trailing-whitespace - Mark trailing whitespaces in red
 let g:strip_whitespace_on_save = 1
 let g:strip_whitespace_confirm = 0                                  " Preventing asking every time before saving
@@ -230,4 +230,4 @@ let g:better_whitespace_guicolor ='red'
 
 call plug#end()
 
-colorscheme molokai
+colorscheme molokai%
