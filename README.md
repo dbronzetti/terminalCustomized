@@ -13,6 +13,7 @@ git checkout -t origin/master
 ```
 brew install macvim the_silver_searcher
 brew install --cask iterm2
+brew install zsh-git-prompt
 
 #Vim Plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
