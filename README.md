@@ -42,7 +42,7 @@ git config --global core.editor "mvim -f"
 ```
 ---
 # FIX git prompt (:|✔)
-In the `/usr/local/opt/zsh-git-prompt/zshrc.sh` file replace this:
+In the `/opt/homebrew/opt/zsh-git-prompt/zshrc.sh` file replace this:
 ```
 if [ -n "$__CURRENT_GIT_STATUS" ]; then
 ```
