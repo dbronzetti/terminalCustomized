@@ -5,6 +5,7 @@ export DEVCLOUD_OWNER="dbronzetti-jt" # ENV var for accessing DevCloud tool
 export BUNDLE_GEM__FURY__IO="LkcUdtYsN1ArzyvkxRVe"
 export HOMEBREW_GITHUB_API_TOKEN="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"
 export DEVKIT_SECRETS_PASSWORD="8NkPdgDgqXjkOiwQ"
+export DISABLE_SPRING="true"
 
 # Setting PATH for brew
 PATH="/opt/homebrew/bin:${PATH}"
