@@ -1,4 +1,4 @@
-#Console
+Console
 alias cls='clear'
 alias ll='cls;ls -ltrG'
 alias la='cls;ll -a'
@@ -10,6 +10,7 @@ alias gpforce='git push --force $(git remote -v|grep origin|awk '\''FNR <= 1 { p
 alias gpush='git push $(git remote -v|grep origin|awk '\''FNR <= 1 { print $1 }'\'') $(git branch | sed -n -e "s/^\* \(.*\)/\1/p")'
 alias gstatus='git status'
 alias gadd='git add -p'
+alias gpull='git pull'
 alias gcempty='git commit --amend --allow-empty'
 alias grebase="git fetch origin master && git rebase origin/master"
 alias sshtest="ssh -T git@github.com"
@@ -42,8 +43,16 @@ alias addipaws-prod="kitt -ep security-group addmyip"
 alias addipaws-stg="kitt -es security-group addmyip"
 alias teleport-login-stg="tsh kube login jt-stg-products-eks-00"
 alias teleport-login-prd="tsh kube login jt-prd-products-eks-00"
-alias linter="bundle exec jt-linter --parallel"
+alias jt-linter="bundle exec jt-linter --parallel"
 alias updevkit="devkit up -d auth auth-front backoffice candidates candidates-consumers candidates-workers companies companies-consumers companies-workers enrolment-es enrolment-es-chrome-browser enrolment-es-workers es-service-gateway farming farming farming-consumers farming-workers gateway integrations-consumers landings minichef staffing staffing-consumers staffing-workers transactions transactions-workers workforce workforce-consumers workforce-workers zeppelin"
+
+#Amenitiz
+alias amenitiz-start='make run/deps && bundle && yarn install && migrate && bin/dev'
+alias amenitiz-stripe-listener='stripe listen --forward-to webhooks.lvh.me:3000/stripe_express/account_event'
+alias amenitiz-e2e-test='yarn install && npm run cy:open'
+alias amenitiz-prod-console='heroku run "rails console" -a amenitiz-production'
+alias amenitiz-linter='npm run linter'
+alias amenitiz-linter-fix='npm run linter-and-fix'
 
 #Docker
 alias dkstop='docker stop $(docker ps -q)'
@@ -52,7 +61,9 @@ alias dkrails='docker run -ti -v "$PWD":/app -p 3000:3000 rails-base bash'
 alias gateway='route -n get default'
 
 #Rails
-alias migrate='rails db:migrate'
+alias bundle='bundle install'
+alias migrate='rake db:migrate'
+alias migrate-test='RAILS_ENV=test rake db:migrate'
 alias console='rails c'
 alias routes='rails routes'
 alias test-console='rails c -e test'
