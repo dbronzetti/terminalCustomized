@@ -1,4 +1,4 @@
-Console
+#Console
 alias cls='clear'
 alias ll='cls;ls -ltrG'
 alias la='cls;ll -a'
@@ -6,14 +6,16 @@ alias reload='. ~/.zshrc'
 alias volumes='cd /Volumes/'
 
 #Git
-alias gpforce='git push --force $(git remote -v|grep origin|awk '\''FNR <= 1 { print $1 }'\'') $(git branch | sed -n -e "s/^\* \(.*\)/\1/p")'
-alias gpush='git push $(git remote -v|grep origin|awk '\''FNR <= 1 { print $1 }'\'') $(git branch | sed -n -e "s/^\* \(.*\)/\1/p")'
+alias gpforce='git push --force $(git remote -v | grep origin | awk '\''FNR <= 1 { print $1 }'\'') $(git branch | sed -n -e "s/^\* \(.*\)/\1/p")'
+alias gpush='git push $(git remote -v|grep origin | awk '\''FNR <= 1 { print $1 }'\'') $(git branch | sed -n -e "s/^\* \(.*\)/\1/p")'
 alias gstatus='git status'
 alias gadd='git add -p'
 alias gpull='git pull'
+alias gdiff='git diff'
 alias gcempty='git commit --amend --allow-empty'
-alias grebase="git fetch origin master && git rebase origin/master"
-alias sshtest="ssh -T git@github.com"
+alias gdefaultbranch='git branch -rl '\''*/HEAD'\'' | awk -F/ '\''{print $NF}'\'
+alias grebase='DEFAULTBRANCH=`gdefaultbranch` && git fetch origin $DEFAULTBRANCH && git rebase origin/$DEFAULTBRANCH'
+alias sshtest='ssh -T git@github.com'
 
 #Robly
 alias vr='cd ~/Documents/projects/robly/ && vagrant up && vagrant ssh'
@@ -53,6 +55,8 @@ alias amenitiz-e2e-test='yarn install && npm run cy:open'
 alias amenitiz-prod-console='heroku run "rails console" -a amenitiz-production'
 alias amenitiz-linter='npm run linter'
 alias amenitiz-linter-fix='npm run linter-and-fix'
+alias amenitiz-secrets='aws-vault exec a6z-development -- make config/application.yml'
+alias amenitiz-ds-start='npm ci && npm run storybook'
 
 #Docker
 alias dkstop='docker stop $(docker ps -q)'
