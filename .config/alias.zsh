@@ -15,6 +15,8 @@ alias gdiff='git diff'
 alias gcempty='git commit --amend --allow-empty'
 alias gdefaultbranch='git branch -rl '\''*/HEAD'\'' | awk -F/ '\''{print $NF}'\'
 alias grebase='DEFAULTBRANCH=`gdefaultbranch` && git fetch origin $DEFAULTBRANCH && git rebase origin/$DEFAULTBRANCH'
+alias gshow='git show --pretty="" HEAD'
+alias gshowname='git show --pretty="" --name-only HEAD'
 alias sshtest='ssh -T git@github.com'
 
 #Robly
@@ -49,14 +51,17 @@ alias jt-linter="bundle exec jt-linter --parallel"
 alias updevkit="devkit up -d auth auth-front backoffice candidates candidates-consumers candidates-workers companies companies-consumers companies-workers enrolment-es enrolment-es-chrome-browser enrolment-es-workers es-service-gateway farming farming farming-consumers farming-workers gateway integrations-consumers landings minichef staffing staffing-consumers staffing-workers transactions transactions-workers workforce workforce-consumers workforce-workers zeppelin"
 
 #Amenitiz
-alias amenitiz-start='make run/deps && bundle && yarn install && migrate && bin/dev'
+alias amenitiz-up='make run/deps && bundle && yarn install && migrate && bin/dev'
 alias amenitiz-stripe-listener='stripe listen --forward-to webhooks.lvh.me:3000/stripe_express/account_event'
+alias amenitiz-e2e-setup='bin/e2e'
 alias amenitiz-e2e-test='yarn install && npm run cy:open'
 alias amenitiz-prod-console='heroku run "rails console" -a amenitiz-production'
 alias amenitiz-linter='npm run linter'
 alias amenitiz-linter-fix='npm run linter-and-fix'
 alias amenitiz-secrets='aws-vault exec a6z-development -- make config/application.yml'
 alias amenitiz-ds-start='npm ci && npm run storybook'
+alias amenitiz-ds-cm='npm run cm'
+alias amenitiz-pull-loco='rake loco:pull_admin_locales'
 
 #Docker
 alias dkstop='docker stop $(docker ps -q)'
