@@ -53,15 +53,20 @@ alias updevkit="devkit up -d auth auth-front backoffice candidates candidates-co
 #Amenitiz
 alias amenitiz-up='make run/deps && bundle && yarn install && migrate && bin/dev'
 alias amenitiz-stripe-listener='stripe listen --forward-to webhooks.lvh.me:3000/stripe_express/account_event'
-alias amenitiz-e2e-setup='bin/e2e'
+alias amenitiz-e2e-start='yarn webpack:clean && yarn install && bin/e2e'
 alias amenitiz-e2e-test='yarn install && npm run cy:open'
+alias amenitiz-e2e-pw-test='npx playwright test'
+alias amenitiz-pw-ui='npx playwright test --ui'
+alias amenitiz-e2e-test-mobile='yarn install && npm run cy:open-mobile'
 alias amenitiz-prod-console='heroku run "rails console" -a amenitiz-production'
 alias amenitiz-linter='npm run linter'
 alias amenitiz-linter-fix='npm run linter-and-fix'
 alias amenitiz-secrets='aws-vault exec a6z-development -- make config/application.yml'
 alias amenitiz-ds-start='npm ci && npm run storybook'
 alias amenitiz-ds-cm='npm run cm'
+alias amenitiz-fint-compile-run='task build:gen && task run:bin'
 alias amenitiz-pull-loco='rake loco:pull_admin_locales'
+alias amenitiz-config='op item get ${tuusernamedeaws} --totp | pbcopy; && aws-vault exec a6z-development -- make config/application.yml && cat /dev/null > pbcopy'
 
 #Docker
 alias dkstop='docker stop $(docker ps -q)'
@@ -70,10 +75,12 @@ alias dkrails='docker run -ti -v "$PWD":/app -p 3000:3000 rails-base bash'
 alias gateway='route -n get default'
 
 #Rails
-alias bundle='bundle install'
 alias migrate='rake db:migrate'
 alias migrate-test='RAILS_ENV=test rake db:migrate'
 alias console='rails c'
 alias routes='rails routes'
 alias test-console='rails c -e test'
 alias swagger='bundle exec rails rswag:specs:swaggerize'
+
+#coding
+alias rubymine='open -na "RubyMine.app"'
