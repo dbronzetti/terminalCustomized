@@ -52,8 +52,9 @@ alias updevkit="devkit up -d auth auth-front backoffice candidates candidates-co
 
 #Amenitiz
 alias amenitiz-up='make run/deps && bundle && yarn install && migrate && bin/dev'
+alias amenitiz-up-sidekiq='make run/deps && bundle && yarn install && migrate && bin/dev_sidekiq'
 alias amenitiz-stripe-listener='stripe listen --forward-to webhooks.lvh.me:3000/stripe_express/account_event'
-alias amenitiz-e2e-start='yarn webpack:clean && yarn install && bin/e2e'
+alias amenitiz-e2e-start='bin/e2e'
 alias amenitiz-e2e-test='yarn install && npm run cy:open'
 alias amenitiz-e2e-pw-test='npx playwright test'
 alias amenitiz-pw-ui='npx playwright test --ui'
