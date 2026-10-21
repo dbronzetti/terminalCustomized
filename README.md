@@ -20,6 +20,25 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 #Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+#1. Create new backup directories
+mkdir -p ~/.vim/{backup_files,swap_files,undo_files,colors}
+
+#2. Download Plugged (which is the plugin manager I decided to use)
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd ~/.vim/bundle && \git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+
+#3. Link to monokai  (you can use molokai if you want)
+ln -s ~/.vim/plugged/molokai/colors/molokai.vim ~/.vim/colors
+ln -s ~/.vim/plugged/vim-monokai/colors/monokai.vim ~/.vim/colors
+ln -s ~/.vim/plugged/vim-valloric-colorscheme/colors/valloric.vim ~/.vim/colors
+ln -s ~/.vim/plugged/idle/colors/idle.vim ~/.vim/colors
+ln -s ~/.vim/plugged/badwolf/colors/badwolf.vim ~/.vim/colors
+ln -s ~/.vim/plugged/molokai-dark/colors/molokai-dark.vim ~/.vim/colors/
+
+#You must install these fonts if you want to see special characters in the status line
+git clone https://github.com/powerline/fonts
 ```
 
 ---
